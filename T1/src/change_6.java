@@ -3,13 +3,14 @@ import java.util.Scanner;
 
 import static java.lang.System.in;
 
-public class change_3 {
+public class change_6 {
     public static void main(String[] args){
         Scanner enter = new Scanner(in).useLocale(Locale.US);
 
         double r;
         double h;
-        double volume;
+        double volumeM3;
+        double litros;
 
         System.out.print("Raio (m): ");
         r = enter.nextDouble();
@@ -17,9 +18,11 @@ public class change_3 {
         System.out.print("Altura (m): ");
         h = enter.nextDouble();
 
-        volume = Math.PI * Math.pow(r, 2) * h;
+        volumeM3 = Math.PI * Math.pow(r, 2) * h;
+        litros = volumeM3 * 1000;
 
-        System.out.println("Volume do silo: " + volume + " m³");
+        System.out.println("Volume em litros: " + litros);
+
         enter.close();
     }
 }

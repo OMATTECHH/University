@@ -7,22 +7,19 @@ public class change_6 {
     public static void main(String[] args){
         Scanner enter = new Scanner(in).useLocale(Locale.US);
 
-        double r;
-        double h;
-        double volumeM3;
-        double litros;
+        double a;
+        double b;
+        double c;
 
-        System.out.print("Raio (m): ");
-        r = enter.nextDouble();
+        System.out.print("Cateto A: ");
+        a = enter.nextDouble();
 
-        System.out.print("Altura (m): ");
-        h = enter.nextDouble();
+        System.out.print("Cateto B: ");
+        b = enter.nextDouble();
 
-        volumeM3 = Math.PI * Math.pow(r, 2) * h;
-        litros = volumeM3 * 1000;
+        c = Math.sqrt(Math.pow(a, 2) + Math.pow(b, 2));
 
-        System.out.println("Volume em litros: " + litros);
-
+        System.out.println("Hipotenusa: " + c);
         enter.close();
     }
 }

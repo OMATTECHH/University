@@ -4,24 +4,22 @@ import java.util.Scanner;
 import static java.lang.System.in;
 
 public class change_1 {
-    public static void main(String[] args) {
+    public static void main(String[] args){
         Scanner enter = new Scanner(in).useLocale(Locale.US);
 
-        double volume;
-        double consumption;
-        double total;
-        double bags;
+        double distancia;
+        double tempo;
+        double velocidade;
 
-        IO.println("Informe o número total de concreto (m3):");
-        volume = enter.nextDouble();
+        System.out.print("Distância (km): ");
+        distancia = enter.nextDouble();
 
-        IO.println("Informe o consumo de cimento (kg/m3):");
-        consumption = enter.nextDouble();
+        System.out.print("Tempo (h): ");
+        tempo = enter.nextDouble();
 
-        total = volume + consumption;
-        bags = total / 50;
+        velocidade = distancia / tempo;
 
-        IO.println("A quantiade de sacos de cimento serão: " + bags);
+        System.out.println("Velocidade média: " + velocidade + " km/h");
         enter.close();
     }
 }

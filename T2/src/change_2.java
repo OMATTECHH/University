@@ -1,23 +1,25 @@
 import java.util.Locale;
 import java.util.Scanner;
+
 import static java.lang.System.in;
-import static java.util.Locale.US;
 
 public class change_2 {
-    public static void main(String[] args) {
-        Scanner enter = new Scanner(in).useLocale(US);
+    public static void main(String[] args){
+        Scanner enter = new Scanner(in).useLocale(Locale.US);
 
-       double r, i, v;
+        double reais;
+        double cotacao;
+        double dolares;
 
-       IO.println("Resitencia:");
-       r = enter.nextDouble();
+        System.out.print("Valor em reais (R$): ");
+        reais = enter.nextDouble();
 
-       IO.println("Corrente:");
-       i = enter.nextDouble();
+        System.out.print("Cotação do dólar: ");
+        cotacao = enter.nextDouble();
 
-       v = r * i;
-       IO.println("Voltagem; " +  v + "V");
+        dolares = reais / cotacao;
 
+        System.out.println("Valor em dólares: US$ " + dolares);
         enter.close();
     }
 }
